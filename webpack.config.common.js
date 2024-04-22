@@ -12,8 +12,10 @@ module.exports = {
     path: libPath,
     filename: "styled-qr-code.js",
     library: "QRCodeStyling",
-    libraryTarget: "umd",
-    libraryExport: "default"
+    libraryTarget: "cjs",
+    libraryExport: "default",
+    umdNamedDefine: true,
+    globalObject: 'typeof self !== \'undefined\' ? self : this',
   },
   module: {
     rules: [
